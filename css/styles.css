@@ -526,10 +526,6 @@ h3 {
   align-items: baseline;
 }
 
-.container-adress {
-  margin-right: 70px;
-}
-
 .contacts.footer {
   color: #ffffff99;
   font-weight: 400;
@@ -575,6 +571,11 @@ h3 {
 
 /* Call to action */
 
+.cta-container {
+  margin-left: 70px;
+  margin-right: 93px;
+}
+
 .cta-social-title {
   color: var(--white-text-color);
   font-weight: 700;
@@ -610,6 +611,63 @@ h3 {
   background: var(--accent-color);
 }
 
+/* Distribution */
+
+.distribution-form {
+  display: flex;
+}
+
+.distribution-title {
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.distribution-mail {
+  min-width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  background: #2f303a;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.distribution-button,
+.button-resend {
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+.distribution-icon {
+  margin-left: 10px;
+}
+
 /* Модальное окно */
 
 .backdrop {
@@ -634,6 +692,7 @@ h3 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 8px 40px 40px 40px;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -662,6 +721,141 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8px;
   margin-right: 8px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  fill: var(--accent-color);
+}
+
+.modal-title {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+}
+
+.modal-form {
+  display: block;
+}
+
+.mofal-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  background-color: white;
+  padding-left: 42px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus,
+.modal-input:focus + .modal-svg {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+textarea::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.comment {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.modal-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Chekbox */
+
+.label-chekbox {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.link-chekbox {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+
+.label-chekbox::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  background-image: url(../images/Block.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 7px;
+  border-radius: 2px;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-checkbox:checked + .label-chekbox::before {
+  width: 16px;
+  height: 15px;
+  background-color: var(--accent-color);
+  background-image: url(../images/Check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2px;
+  border: none;
+}
+
+/* Button */
+
+.button-resend {
+  margin: 30px auto 0 auto;
 }
